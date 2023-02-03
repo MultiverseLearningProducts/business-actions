@@ -23,11 +23,10 @@ jobs:
             - name: use Node 16
               uses: actions/setup-node@v3
               with:
-                node-version: 16.x
+                  node-version: 16.x
             - name: Install Railway
               run: npm i -g @railway/cli
-            -name: Deploy
+            - name: Deploy
               run: railway up
               env:
-                RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-
+                  RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
