@@ -19,8 +19,7 @@ body {
   font-family: 'rubik', sans-serif;
   font-weight: 500;
   font-size: 4rem;
-  /* color: white; */
-  color: rgb(255, 0, 144);
+  color: white;
 }
 
 button {
