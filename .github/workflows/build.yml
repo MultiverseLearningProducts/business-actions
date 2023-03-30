@@ -2,12 +2,13 @@ name: Test and Deploy
 
 on: 
   push: 
-    branches: [main]
+    branches: [ main ] 
 
 jobs:
   test:
     name: Test
     run-ons: ubuntu-latest
+    
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
