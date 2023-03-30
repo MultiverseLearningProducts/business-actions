@@ -7,7 +7,7 @@ on:
 jobs:
   test:
     name: Test
-    run-ons: macOS
+    run-ons: ubuntu latest
 
     steps:
     - uses: actions/checkout@v3
