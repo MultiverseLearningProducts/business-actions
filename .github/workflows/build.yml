@@ -1,18 +1,16 @@
 name: Test and Deploy 
-
-on: 
-  push: 
-    branches: [ main ] 
+on:
+  push:
+    branches: [ main ]
 
 jobs:
   test:
     name: Test
-    run-ons: ubuntu-latest
-    
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
-    with:
-      node-version: 19.x
+      with:
+        node-version: 16.x
     - run: npm ci
     - run: npm test
