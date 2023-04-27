@@ -1,0 +1,22 @@
+name: Test
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+# job id
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+# list of steps to complete in workflow, in order
+    steps: 
+    # actions
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16.x
+      # install packages and run tests
+    - run: npm install
+    - run: npm ci
+    - run: npm test
