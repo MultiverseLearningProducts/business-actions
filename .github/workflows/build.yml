@@ -14,9 +14,9 @@ jobs:
     - run: npm install
     - run: npm ci
     - run: npm test
-build:
+  build:
     name: Build and Deploy
-    needs: test
+    needs: test 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
