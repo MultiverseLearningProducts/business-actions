@@ -27,6 +27,6 @@ jobs:
       - name: use Node 16
         uses: actions/setup-node@v3
       - name: Deploy
-        run: railway up
+        run: railway run
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
