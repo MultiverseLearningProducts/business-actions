@@ -3,7 +3,7 @@ on:
   push:
     branches: [ main ]
 jobs:
-  
+
   build:
     name: Build and Deploy
     
@@ -24,6 +24,9 @@ jobs:
 
 
           #installed dependency
-      
+# rm -rf node_modules package-lock.json
+# npm cache clean --force
+# npm install
+#done
       
   
