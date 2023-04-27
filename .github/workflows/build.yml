@@ -32,4 +32,3 @@ build:
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
 
-      # hope this works
