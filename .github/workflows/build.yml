@@ -31,3 +31,5 @@ build:
         run: railway up
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+
+      # hope this works
