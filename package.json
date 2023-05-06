@@ -1,7 +1,7 @@
 {
   "name": "business-contacts",
   "version": "1.0.0",
-  "description": "",
+  "description": "An application serving up business contacts, via Node, Express, and React",
   "scripts": {
     "build": "parcel build src/index.html",
     "start": "node server.js",
@@ -33,5 +33,17 @@
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.3.0",
     "whatwg-fetch": "3.6.2"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylan909/business-actions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dylan909/business-actions/issues"
+  },
+  "homepage": "https://github.com/dylan909/business-actions#readme",
+  "devDependencies": {
+    "process": "^0.11.10"
   }
 }
