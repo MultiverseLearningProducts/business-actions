@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-
+    needs: [test]
     runs-on: ubuntu-latest
 
     strategy:
@@ -29,3 +29,10 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+    - name: Install Railway
+    - run: npm install -g @railway/cli
+    - name: Deploy
+    - run: railway up
+      env:
+        RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+
