@@ -22,13 +22,8 @@ name: Build and Deploy
 jobs:
   needs: test
 
-  test:
-    name: Test
-    runs-on: ubuntu-latest
-
   build:
     name: Build and Deploy
-    needs: test
     runs-on: ubuntu-latest
 
     steps:
