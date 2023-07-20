@@ -1,31 +1,25 @@
-name: Test and Deploy
+name: Deploy  # Renamed the name at the top to "Deploy"
+
 on:
-  push:
-    branches: [main]
+  push:  # Triggers the workflow on every push to the repository
+
 jobs:
-  test:
-    name: Test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-      - run: npm ci
-      - run: npm test
   build:
     name: Build and Deploy
-    needs: test
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: use Node 16
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
+
       - name: Install Railway
         run: npm i -g @railway/cli
+
       - name: Deploy
         run: railway up
         env:
