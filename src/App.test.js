@@ -1,5 +1,5 @@
 /** @jest-environment jsdom */
-const {fetch} = require('whatwg-fetch');
+const { fetch } = require('whatwg-fetch');
 global.fetch = fetch;
 import React from 'react';
 import '@testing-library/jest-dom';
@@ -10,4 +10,8 @@ it('should render', () => {
   render(<App />);
 
   expect(screen.getByText('Business Contacts')).toBeInTheDocument();
+});
+
+it('should fail', () => {
+  expect(false).toBe(true);
 });
