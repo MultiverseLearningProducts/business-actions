@@ -1,6 +1,6 @@
-name: Test and Deploy
+name: Test
 on:
-  push:
+  pull_request:
     branches: [ main ]
 
 jobs:
