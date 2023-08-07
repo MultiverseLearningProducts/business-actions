@@ -5,6 +5,13 @@ on:
     branches: [ main ]
 
 jobs:
+  start:
+    name: Starting Point
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start job
+        run: echo "Starting the workflow"
+
   build:
     name: Build and Deploy
     needs: test
@@ -22,5 +29,6 @@ jobs:
         run: railway up
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+
 
 
