@@ -11,5 +11,5 @@ on:
     - uses: actions/setup-node@v3
       with:
         node-version: 16.x
-    - run: npm ci
+    - run: npm ci 
     - run: npm test
