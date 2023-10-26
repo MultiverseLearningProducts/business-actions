@@ -7,4 +7,3 @@ dist
 .parcel-cache
 .env
 .npmrc
-.vercel
