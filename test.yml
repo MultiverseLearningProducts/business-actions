@@ -1,0 +1,25 @@
+
+name: Test
+
+on:
+pull_request:
+  branches: [ main ]
+
+# top-level call-out of the diffferent tasks within the workflow
+jobs:
+ test:
+    name: Test
+    runs-on: ubuntu latest
+
+# list of steps to complee in the workflow, in order 
+# extend from these published, pre-configured actions
+steps:
+  - uses: actions/checkout@v3
+  - uses: actions/setup-node@v3
+with:
+    # the node version for the setup-node action
+    node-version: 16.x
+# Install packages and run tests
+    -run: npm ci
+    -run: npm test
+
